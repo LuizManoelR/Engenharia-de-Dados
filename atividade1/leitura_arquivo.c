@@ -116,8 +116,7 @@ void exibir_discentes(Discente * d, int tamanho){
             printf("\n\n> Pressione ENTER para continuar ou digite 0 para sair\n> ");
             opcao = getchar();
             char c;
-            while ((c = getchar()) != '\n' && c != EOF);
-            if(opcao == '0'){break;}
+            if(opcao == '0'){while ((c = getchar()) != '\n' && c != EOF);break;}
 
         }
 
