@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11 -I.
 BIN_DIR = bin
-SRCS = interface.c leitura_arquivo.c main.c
+SRCS = interface.c leitura_arquivo.c escrita_resultado_arquivo.c main.c
 OBJS = $(patsubst %.c,$(BIN_DIR)/%.o,$(SRCS))
 TARGET = $(BIN_DIR)/main
 
@@ -22,5 +22,5 @@ run: all
 	./$(TARGET)
 
 clean:
-	rm -rf $(BIN_DIR)/*
+	rm -rf $(BIN_DIR) terminalOutput.txt
 
