@@ -5,6 +5,8 @@
 #include "escrita_resultado_arquivo.h"
 
 void escrever_discente(FILE* arquivo, Discente d){
+    // Função para escrever as informações sobre o discente, utilizando o formato específico no arquivo aberto.
+
     fprintf(
     arquivo,
     "_______________________________________________________________________________________________________________________"
@@ -34,8 +36,10 @@ void escrever_discente(FILE* arquivo, Discente d){
 }
 
 void escrever_discentes_txt(const char nomeArquivo[], Discente * d, int tamanho){
+    // Função para criar um arquivo com o nome dado, escrever cada discente no arquivo e fechar após conclusão.
     printf("========================================================================================================================\n");
     
+    // Abre ou cria o arquivo
     FILE *arquivoSaida = fopen(nomeArquivo, "w");
     if (!arquivoSaida) {
         printf("Não foi possível criar o arquivo de saída. Terminando...\n");
